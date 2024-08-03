@@ -1,0 +1,3 @@
+torch>=1.7.0
+opencv-python>=4.5.1.48
+pandas>=1.1.5
