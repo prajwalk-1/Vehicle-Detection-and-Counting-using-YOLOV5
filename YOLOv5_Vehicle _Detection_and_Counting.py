@@ -26,9 +26,9 @@ model_path = 'yolov5s.pt'  # Path to your YOLOv5 model
 model = load_model(model_path, device)
 
 # Initialize video capture from CCTV feed
-username = 'admin'
-password = '367@kasez'
-ip = '192.168.1.60'
+username = 'username'
+password = 'password'
+ip = '192.168.1.225'
 port = '554'
 channel = '101'
 
