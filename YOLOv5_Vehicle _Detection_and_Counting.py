@@ -28,8 +28,8 @@ model = load_model(model_path, device)
 # Initialize video capture from CCTV feed
 username = 'username'
 password = 'password'
-ip = '192.168.1.225'
-port = '554'
+ip = 'add your ip'
+port = 'port'
 channel = '101'
 
 stream_url = f"rtsp://{username}:{password}@{ip}:{port}/Streaming/Channels/{channel}"
