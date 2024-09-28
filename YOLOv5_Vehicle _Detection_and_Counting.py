@@ -4,7 +4,6 @@ import pandas as pd
 import time
 import os
 
-# Function to select the appropriate device
 def get_device():
     if torch.cuda.is_available():
         print("CUDA device is available. Using GPU.")
@@ -13,7 +12,7 @@ def get_device():
         print("CUDA device is not available. Using CPU.")
         return 'cpu'
 
-# Load YOLOv5 model with force_reload to ensure cache issues are resolved
+# Load YOLOv5 model
 def load_model(model_path, device):
     print("Loading model...")
     model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path, device=device, force_reload=True)
@@ -58,7 +57,7 @@ if not os.path.isfile(csv_file):
 else:
     df = pd.read_csv(csv_file)
 
-# Track time and initialize counters
+# Track time and initialize counters 
 start_time = time.time()
 last_save_time = start_time
 counter = {3: 0, 2: 0, 4: 0, 5: 0}
